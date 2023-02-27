@@ -18,77 +18,77 @@
 
 ```java
 public void test1() {
-    List<User> userList = this.list();
-    // 1. 实体类转换
-    List<UserVo> userVoList = EntityUtils.toList(userList, UserVo::new);
-    // 2. 取出某列数据
-    List<String> userNames = EntityUtils.toList(userList, User::getUserName);
-}
+        List<User> userList = this.list();
+        // 1. 实体类转换
+        List<UserVo> userVoList = EntityUtils.toList(userList, UserVo::new);
+        // 2. 取出某列数据
+        List<String> userNames = EntityUtils.toList(userList, User::getUserName);
+        }
 ```
 
 #### List转数组
 
 ```java
 public void test2() {
-    List<User> userList = this.list();
-    // 1. 不改变元素类型
-    User[] userArrays = EntityUtils.toArray(userList);
-    // 2. 改变元素类型
-    String[] userNames = EntityUtils.toArray(userList, User::getUserName);
-}
+        List<User> userList = this.list();
+        // 1. 不改变元素类型
+        User[] userArrays = EntityUtils.toArray(userList);
+        // 2. 改变元素类型
+        String[] userNames = EntityUtils.toArray(userList, User::getUserName);
+        }
 ```
 
 #### 数组转集合
 
 ```java
 public void test3() {
-    Integer[] arrays = {1, 2, 3, 4, 5, 6};
-    // 1. 不改变元素类型
-    List<Integer> integerList = EntityUtils.toList(arrays);
-    // 2. 改变元素类型
-    List<String> stringList = EntityUtils.toList(arrays, String::valueOf);
-}
+        Integer[] arrays = {1, 2, 3, 4, 5, 6};
+        // 1. 不改变元素类型
+        List<Integer> integerList = EntityUtils.toList(arrays);
+        // 2. 改变元素类型
+        List<String> stringList = EntityUtils.toList(arrays, String::valueOf);
+        }
 ```
 
 #### 实体类转Map
 
 ```java
 public void test4() {
-    User user = this.getById(1);
-    Map<String, Object> map = EntityUtils.toMap(user);
-}
+        User user = this.getById(1);
+        Map<String, Object> map = EntityUtils.toMap(user);
+        }
 ```
 
 #### List转Map
 
 ```java
 public void test5() {
-    List<User> userList = this.list();
-    Map<Long, String> map = EntityUtils.toMap(userList, User::getUserId, User::getUserName);
-    
-    Map<Long, User> map2 = EntityUtils.toMap(userList, User::getUserId);
-}
+        List<User> userList = this.list();
+        Map<Long, String> map = EntityUtils.toMap(userList, User::getUserId, User::getUserName);
+
+        Map<Long, User> map2 = EntityUtils.toMap(userList, User::getUserId);
+        }
 ```
 
 #### List转Set
 
 ```java
 public void test6() {
-    List<User> userList = this.list();
-    // User实体类equalts方法得重写
-    Set<User> userSet = EntityUtils.toSet(userList);
-    // 改变元素类型
-    Set<String> userSets = EntityUtils.toSet(userList, User::getUserName);
-}
+        List<User> userList = this.list();
+        // User实体类equalts方法得重写
+        Set<User> userSet = EntityUtils.toSet(userList);
+        // 改变元素类型
+        Set<String> userSets = EntityUtils.toSet(userList, User::getUserName);
+        }
 ```
 
 #### Arrays.asList()处理
 
 ```java
 public void test7() {
-    Integer[] arrays = {1, 2, 3, 4, 5, 6};
-    List<Integer> integerList = Arrays.asList(arrays);
-    List<Integer> newList = EntityUtils.toList(integerList, Function.identity());
-    List<String> newList2 = EntityUtils.toList(integerList, String::valueOf);
-}
+        Integer[] arrays = {1, 2, 3, 4, 5, 6};
+        List<Integer> integerList = Arrays.asList(arrays);
+        List<Integer> newList = EntityUtils.toList(integerList, Function.identity());
+        List<String> newList2 = EntityUtils.toList(integerList, String::valueOf);
+        }
 ```
