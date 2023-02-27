@@ -6,17 +6,17 @@ spring:
     username: root
     password: root
 
-#  # redis 配置
-#  redis:
-#    # 地址
-#    host: localhost
-#    # 端口，默认为6379
-#    port: 6379
-#    # 数据库索引
-#    database: 1
-#    # 密码
-#    password:
-#
+  # redis 配置
+  redis:
+    # 地址
+    host: localhost
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 1
+    # 密码
+    password:
+
 
 ucode:
   code:
@@ -27,6 +27,7 @@ ucode:
     remove-table-prefix: true
     use-swagger: false
 
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
