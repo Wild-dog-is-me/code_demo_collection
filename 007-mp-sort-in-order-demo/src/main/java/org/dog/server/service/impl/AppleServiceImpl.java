@@ -74,7 +74,7 @@ public class AppleServiceImpl extends ServiceImpl<AppleMapper, Apple> implements
     }
 
     /**
-     * 传统方式取出集合中最值元素
+     * 取出集合中最值元素
      * <p>
      * 优点：语义直观
      */
