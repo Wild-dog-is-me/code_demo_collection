@@ -14,19 +14,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName(value = "apple")
-public class Apple{
+public class Apple implements Comparable<Apple>{
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
     private Integer id;
     private String name;
     private Integer weight;
     private String origin;
-    
+
     public Apple(Apple apple) {
         if (Objects.nonNull(apple)) {
             this.id=apple.id;
@@ -35,4 +37,13 @@ public class Apple{
             this.origin=apple.origin;
         }
     }
+
+    /**
+     * 升序排练
+     */
+    @Override
+    public int compareTo(@NotNull Apple o) {
+        return this.weight - o.weight;
+    }
+
 }
