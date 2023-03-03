@@ -7,9 +7,10 @@ import org.dog.server.entity.UserAggrVo;
 
 import java.util.List;
 
-public interface IUserService extends IService<User> {
+public interface IUserAggrService extends IService<UserAggr> {
 
-    public List<UserAggr> selectList1();
+    public List<UserAggr> selectUserList1();
 
-    public List<UserAggrVo> selectList2();
+    public List<UserAggrVo> selectUserList2();
+
 }
