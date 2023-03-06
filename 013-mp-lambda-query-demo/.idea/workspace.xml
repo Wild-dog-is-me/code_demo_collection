@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4515f9fe-b372-4c4f-be12-73740e2b5ae7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/entity/vo/DeptVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/controller/AppleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/domain/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/mapper/AppleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/service/IAppleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/java/org/dog/server/service/impl/AppleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../010-java8-lambda-demo/src/test/java/org/dog/server/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../012-complicated-forms-lambda-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../012-complicated-forms-lambda-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../012-complicated-forms-lambda-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../012-complicated-forms-lambda-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IDeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/DeptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/service/IDeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/IDeptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/DeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/DeptServiceImpl.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/UserServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MaR1EkhFc3RjNST4YqpeCtMchR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="013-mp-lambda-query-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dog.server.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4515f9fe-b372-4c4f-be12-73740e2b5ae7" name="Changes" comment="" />
+      <created>1678003492210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678003492210</updated>
+      <workItem from="1678003494823" duration="4188000" />
+      <workItem from="1678011112758" duration="18037000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
