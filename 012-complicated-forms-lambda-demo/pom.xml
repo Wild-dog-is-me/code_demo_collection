@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.11</version>
+        <version>2.3.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.dog</groupId>
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>xin.altitude.cms</groupId>
             <artifactId>ucode-cms-common</artifactId>
-            <version>1.6.2.1</version>
+            <version>1.6.2</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

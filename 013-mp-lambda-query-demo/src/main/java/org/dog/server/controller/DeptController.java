@@ -16,8 +16,18 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.dog.server.mapper.DeptMapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.dog.server.service.IDeptService;
+
+import javax.annotation.Resource;
+
 @RestController
 @RequestMapping("/server/dept")
 public class DeptController {
 
+    @Resource
+    private IDeptService deptService;
+
+    @GetMapping("/list/{deptId}")
+    public AjaxResult list1(@PathVariable Long deptId) {
+        return AjaxResult.success(deptService.selectDeptList1(deptId));
+    }
 }
