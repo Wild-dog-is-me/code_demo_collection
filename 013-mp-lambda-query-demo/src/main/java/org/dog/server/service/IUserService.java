@@ -23,4 +23,19 @@ public interface IUserService extends IService<User>{
      */
     public List<UserVo> findUserByDeptName();
 
+    /**
+     * 无筛选条件分页查询用户表关联数据（对部门表中的空属性完成赋值）
+     */
+    public IPage<UserVo> selectUserPage1();
+
+    /**
+     * 主表（用户表）中添加查询条件 筛选条件分页查询用户表关联数据（对部门表中对空属性完成赋值）
+     */
+    public IPage<UserVo> selectUserPage2();
+
+    /**
+     * 从表（部门表）中添加查询条件 筛选条件分页查询用户表关联数据（对部门表中对空属性完成赋值）
+     */
+    public IPage<UserVo> selectUserPage3();
+
 }

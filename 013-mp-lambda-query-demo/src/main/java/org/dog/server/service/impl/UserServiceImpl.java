@@ -3,6 +3,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.dog.server.domain.Dept;
 import org.dog.server.domain.User;
@@ -68,4 +69,71 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements IUs
         userVos.forEach(e -> e.setDeptName(map.get(e.getDeptId()).getDeptName()));
         return userVos;
     }
+
+    @Override
+    public IPage<UserVo> selectUserPage1() {
+        Page<User> page = new Page<>(1, 5);
+        Page<User> userPage = this.page(page);
+        IPage<UserVo> userVoIPage = EntityUtils.toPage(userPage, UserVo::new);
+        Set<Long> deptIds = EntityUtils.toSet(userVoIPage.getRecords(), UserVo::getDeptId);
+        if (deptIds.size() > 0) {
+            LambdaQueryWrapper<Dept> wrapper = Wrappers.lambdaQuery(Dept.class)
+                    .in(Dept::getDeptId, deptIds)
+                    .select(Dept::getDeptId, Dept::getDeptName);
+            List<Dept> deptList = deptService.list(wrapper);
+            Map<Long, Dept> map = EntityUtils.toMap(deptList, Dept::getDeptId, e -> e);
+            userVoIPage.getRecords().forEach(e -> e.setDeptName(map.get(e.getDeptId()).getDeptName()));
+        }
+        return userVoIPage;
+    }
+
+    @Override
+    public IPage<UserVo> selectUserPage2() {
+        Page<User> page = new Page<>(1, 5);
+        LambdaQueryWrapper<User> gt = Wrappers.lambdaQuery(User.class).gt(User::getAge, 20);
+        Page<User> userPage = this.page(page, gt);
+        IPage<UserVo> userVoIPage = EntityUtils.toPage(userPage, UserVo::new);
+        Set<Long> deptIds = EntityUtils.toSet(userVoIPage.getRecords(), User::getDeptId);
+        if (deptIds.size() > 0) {
+            LambdaQueryWrapper<Dept> wrapper = Wrappers.lambdaQuery(Dept.class)
+                    .in(Dept::getDeptId, deptIds)
+                    .select(Dept::getDeptId,Dept::getDeptName);
+            List<Dept> deptList = deptService.list(wrapper);
+            Map<Long, Dept> map = EntityUtils.toMap(deptList, Dept::getDeptId, e -> e);
+            userVoIPage.getRecords().forEach(e -> e.setDeptName(map.get(e.getDeptId()).getDeptName()));
+        }
+        return userVoIPage;
+    }
+
+    @Override
+    public IPage<UserVo> selectUserPage3() {
+        Page<User> page = new Page<>(1, 5);
+        LambdaQueryWrapper<Dept> wrapper = Wrappers.lambdaQuery(Dept.class).eq(Dept::getDeptName, "Tomcat");
+        List<Dept> deptList = deptService.list(wrapper);
+        Set<Long> deptIds = EntityUtils.toSet(deptList, Dept::getDeptId);
+        LambdaQueryWrapper<User> in = Wrappers.lambdaQuery(User.class).in(User::getDeptId, deptIds);
+        Page<User> userPage = this.page(page, in);
+        Map<Long, Dept> map = EntityUtils.toMap(deptList, Dept::getDeptId, e -> e);
+        IPage<UserVo> userVoIPage = EntityUtils.toPage(userPage, UserVo::new);
+        userVoIPage.getRecords().forEach(e -> e.addDeptInfo(map.get(e.getDeptId())));
+        return userVoIPage;
+    }
+
+    /**
+     * 代码优化
+     */
+    public IPage<UserVo> selectUserPage5() {
+        Page<User> page = new Page<>(1, 5);
+        LambdaQueryWrapper<Dept> wrapper = Wrappers.lambdaQuery(Dept.class).eq(Dept::getDeptName, "Tomcat");
+        List<Dept> deptList = deptService.list(wrapper);
+        Set<Long> deptIds = EntityUtils.toSet(deptList, Dept::getDeptId);
+        LambdaQueryWrapper<User> in = Wrappers.lambdaQuery(User.class).in(User::getDeptId, deptIds);
+        Page<User> userPage = this.page(page, in);
+        Map<Long, Dept> map = EntityUtils.toMap(deptList, Dept::getDeptId, e -> e);
+        IPage<UserVo> userVoIPage = EntityUtils.toPage(userPage, UserVo::new);
+        userVoIPage.getRecords().forEach(e -> e.addDeptInfo(map.get(e.getDeptId())));
+        return userVoIPage;
+    }
+
+
 }

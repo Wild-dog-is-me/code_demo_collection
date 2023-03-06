@@ -2,6 +2,7 @@ package org.dog.server.entity.vo;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.dog.server.domain.Dept;
 import org.dog.server.domain.User;
 
 /**
@@ -24,4 +25,10 @@ public class UserVo extends User {
         super(user);
     }
 
+    /**
+     * 优化属性注入
+     */
+    public void addDeptInfo(Dept dept) {
+        this.deptName = dept.getDeptName();
+    }
 }

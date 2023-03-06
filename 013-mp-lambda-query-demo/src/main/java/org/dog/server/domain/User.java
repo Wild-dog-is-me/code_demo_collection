@@ -26,6 +26,7 @@ public class User extends Model<User> {
 
     public User(User user) {
         if (Objects.nonNull(user)) {
+            this.age = user.age;
             this.userId = user.userId;
             this.userName = user.userName;
             this.deptId = user.deptId;

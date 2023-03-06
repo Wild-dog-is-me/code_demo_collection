@@ -41,4 +41,20 @@ public class UserController {
         return AjaxResult.success(userService.findUserByDeptName());
     }
 
+    @GetMapping("/page1")
+    public AjaxResult page1() {
+        return AjaxResult.success(userService.selectUserPage1());
+    }
+
+    @GetMapping("/page2")
+    public AjaxResult page2() {
+        return AjaxResult.success(userService.selectUserPage2());
+    }
+
+    @GetMapping("/page3")
+    public AjaxResult page3() {
+        return AjaxResult.success(userService.selectUserPage3());
+    }
+
+
 }
