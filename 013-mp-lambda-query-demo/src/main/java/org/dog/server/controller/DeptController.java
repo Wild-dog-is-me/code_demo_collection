@@ -26,8 +26,18 @@ public class DeptController {
     @Resource
     private IDeptService deptService;
 
-    @GetMapping("/list/{deptId}")
-    public AjaxResult list1(@PathVariable Long deptId) {
+    @GetMapping("/list1/{deptId}")
+    public AjaxResult list1(@PathVariable(value = "deptId") Long deptId) {
         return AjaxResult.success(deptService.selectDeptList1(deptId));
+    }
+
+    @GetMapping("/list2")
+    public AjaxResult list2() {
+        return AjaxResult.success(deptService.selectDeptList2());
+    }
+
+    @GetMapping("/list3")
+    public AjaxResult list3() {
+        return AjaxResult.success(deptService.selectDeptList3());
     }
 }
