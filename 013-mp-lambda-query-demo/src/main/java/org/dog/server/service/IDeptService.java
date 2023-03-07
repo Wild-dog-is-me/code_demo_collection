@@ -1,4 +1,5 @@
 package org.dog.server.service;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.dog.server.domain.Dept;
 import org.dog.server.entity.vo.DeptVo;
@@ -21,4 +22,19 @@ public interface IDeptService extends IService<Dept>{
      * 查询每个部门年龄最大的用户
      */
     public List<DeptVo> selectDeptList3();
+
+    /**
+     * 取出部门DO
+     */
+    public IPage<Dept> selectDeptPage1();
+
+    /**
+     * 分页查询所有部门下所对应的用户
+     */
+    public IPage<DeptVo> selectDeptPage2();
+
+    /**
+     * 分页查询所有部门下所对应的用户（代码优化版）
+     */
+    public IPage<DeptVo> selectDeptPage3();
 }

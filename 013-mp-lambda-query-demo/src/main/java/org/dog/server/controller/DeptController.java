@@ -40,4 +40,19 @@ public class DeptController {
     public AjaxResult list3() {
         return AjaxResult.success(deptService.selectDeptList3());
     }
+
+    @GetMapping("/page1")
+    public AjaxResult page1() {
+        return AjaxResult.success(deptService.selectDeptPage1());
+    }
+
+    @GetMapping("/page2")
+    public AjaxResult page2() {
+        return AjaxResult.success(deptService.selectDeptPage2());
+    }
+
+    @GetMapping("/page3")
+    public AjaxResult page3() {
+        return AjaxResult.success(deptService.selectDeptPage3());
+    }
 }

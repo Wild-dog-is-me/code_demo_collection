@@ -11,8 +11,8 @@
     <groupId>org.dog</groupId>
     <artifactId>server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>013-mp-lambda-query-demo</name>
-    <description>013-mp-lambda-query-demo</description>
+    <name>014-more-to-more-query</name>
+    <description>014-more-to-more-query</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,45 +21,23 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>xin.altitude.cms</groupId>
-            <artifactId>ucode-cms-code-spring-boot-starter</artifactId>
-            <version>1.6.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>xin.altitude.cms</groupId>
             <artifactId>ucode-cms-common</artifactId>
-            <version>1.6.2</version>
+            <version>1.6.2.3</version>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
+        <!--代码本地化生成依赖-->
         <dependency>
             <groupId>xin.altitude.cms</groupId>
-            <artifactId>ucode-cms-ui</artifactId>
+            <artifactId>ucode-cms-code-spring-boot-starter</artifactId>
             <version>1.6.2</version>
         </dependency>
     </dependencies>

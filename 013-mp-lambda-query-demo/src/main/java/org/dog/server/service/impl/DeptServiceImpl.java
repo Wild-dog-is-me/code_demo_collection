@@ -1,8 +1,9 @@
 package org.dog.server.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.dog.server.domain.Dept;
 import org.dog.server.domain.User;
@@ -13,10 +14,10 @@ import org.dog.server.service.IDeptService;
 import org.springframework.stereotype.Service;
 import xin.altitude.cms.common.util.ColUtils;
 import xin.altitude.cms.common.util.EntityUtils;
+import xin.altitude.cms.common.util.FieldInjectUtils;
 import xin.altitude.cms.common.util.MapUtils;
 
 import javax.annotation.Resource;
-import javax.swing.text.html.parser.Entity;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -68,4 +69,35 @@ public class DeptServiceImpl extends ServiceImpl<DeptMapper, Dept> implements ID
         }
         return deptVos;
     }
+
+    @Override
+    public IPage<Dept> selectDeptPage1() {
+        Page<Dept> page = this.page(new Page<>(1, 3));
+        return page;
+    }
+
+    @Override
+    public IPage<DeptVo> selectDeptPage2() {
+        Page<Dept> page = this.page(new Page<>(1, 3));
+        IPage<DeptVo> deptVoIPage = EntityUtils.toPage(page, DeptVo::new);
+        Set<Long> deptIds = EntityUtils.toSet(deptVoIPage.getRecords(), DeptVo::getDeptId);
+        if (deptIds.size() > 0) {
+            LambdaQueryWrapper<User> in = Wrappers.lambdaQuery(User.class).in(User::getDeptId, deptIds);
+            List<User> userList = userMapper.selectList(in);
+            Map<Long, List<User>> map = EntityUtils.groupBy(userList, User::getDeptId);
+            deptVoIPage.getRecords().forEach(e -> e.setUserList(map.get(e.getDeptId())));
+        }
+        return deptVoIPage;
+    }
+
+    @Override
+    public IPage<DeptVo> selectDeptPage3() {
+        Page<Dept> page = this.page(new Page<>(1, 3));
+        IPage<DeptVo> deptVoIPage = EntityUtils.toPage(page, DeptVo::new);
+        // 一行搞定userList属性注入
+        FieldInjectUtils.injectListField(deptVoIPage, DeptVo::getDeptId, UserServiceImpl.class, User::getDeptId, DeptVo::getUserList);
+        return deptVoIPage;
+    }
+
+
 }
