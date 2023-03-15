@@ -4,81 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4515f9fe-b372-4c4f-be12-73740e2b5ae7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/StuSubRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/SubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/domain/StuSubRelation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/domain/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/domain/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/entity/bo/SubjectBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/entity/vo/StudentVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/mapper/StuSubRelationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/mapper/SubjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IStuSubRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IStudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/ISubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/StuSubRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/SubjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/controller/StuSubRelationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/controller/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/controller/SubjectController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/domain/StuSubRelation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/domain/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/domain/Subject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/entity/bo/SubjectBo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/entity/vo/StudentVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/mapper/StuSubRelationMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/mapper/StudentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/mapper/SubjectMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/IStuSubRelationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/IStudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/ISubjectService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/StuSubRelationServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/SubjectServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/controller/StuSubRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/controller/SubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/domain/StuSubRelation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/domain/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/domain/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/entity/StudentVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/entity/SubjectBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/mapper/StuSubRelationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/mapper/SubjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/IStuSubRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/IStudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/ISubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/impl/StuSubRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/java/org/dog/server/service/impl/SubjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../014-more-to-more-query/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_code_1_6_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_code_1_6_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_code_spring_boot_starter_1_6_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_code_spring_boot_starter_1_6_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_core_1_6_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_core_1_6_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_swagger_1_6_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xin_altitude_cms_ucode_cms_swagger_1_6_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/013-mp-lambda-query-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/013-mp-lambda-query-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/controller/DeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/IDeptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dog/server/service/impl/DeptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/controller/DeptController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/service/IDeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/IDeptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/DeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/DeptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/dog/server/service/impl/UserServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="4515f9fe-b372-4c4f-be12-73740e2b5ae7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +94,7 @@
       <workItem from="1678011112758" duration="19109000" />
       <workItem from="1678080864654" duration="6873000" />
       <workItem from="1678106650782" duration="23229000" />
-      <workItem from="1678174457744" duration="3084000" />
+      <workItem from="1678174457744" duration="3243000" />
     </task>
     <servers />
   </component>

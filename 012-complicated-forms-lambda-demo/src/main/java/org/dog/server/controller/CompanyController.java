@@ -17,12 +17,12 @@ import java.util.List;
 @RequestMapping("/server/company")
 public class CompanyController {
 
-    @Resource
+    @Autowired
     private ICompanyService companyService;
 
-    @GetMapping("/list1")
-    public AjaxResult list1(List<String> industry,List<String> province,List<String> round) {
-        List<Company> companies = companyService.selectCompanyList(industry, province, round);
+    @PutMapping("/list1")
+    public AjaxResult list1(String[] industry) {
+        List<Company> companies = companyService.selectCompanyList(Arrays.asList(industry));
         return AjaxResult.success(companies);
     }
 

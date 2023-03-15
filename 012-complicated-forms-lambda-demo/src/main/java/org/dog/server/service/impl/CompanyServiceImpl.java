@@ -24,21 +24,21 @@ public class CompanyServiceImpl extends ServiceImpl<CompanyMapper, Company> impl
             });
         }
 
-        if (province.size() > 0) {
-            wrapper.and(e -> {
-                for (String s : province) {
-                    e.or(f -> f.eq(Company::getProvince, s));
-                }
-            });
-        }
-
-        if (round.size() > 0) {
-            wrapper.and(e -> {
-                for (String s : round) {
-                    e.or(f -> f.eq(Company::getRound, s));
-                }
-            });
-        }
+//        if (province.size() > 0) {
+//            wrapper.and(e -> {
+//                for (String s : province) {
+//                    e.or(f -> f.eq(Company::getProvince, s));
+//                }
+//            });
+//        }
+//
+//        if (round.size() > 0) {
+//            wrapper.and(e -> {
+//                for (String s : round) {
+//                    e.or(f -> f.eq(Company::getRound, s));
+//                }
+//            });
+//        }
         System.out.println(wrapper.getTargetSql());
         return this.list(wrapper);
     }
