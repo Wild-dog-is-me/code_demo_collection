@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import xin.altitude.cms.bitmap.annotation.BitMap;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.util.EntityUtils;
 import xin.altitude.cms.common.util.RedisBitMapUtils;
@@ -51,6 +52,63 @@ public class UserController {
         RedisBitMapUtils.setBit(USER_BITMAP_KEY, id);
         // 移除
         RedisBitMapUtils.removeBit(USER_BITMAP_KEY, id);
+        return AjaxResult.success();
+    }
+
+    /**
+     * 初始化BitMap
+     */
+    @GetMapping("/list1")
+    public AjaxResult list1() {
+        List<Long> userIds = EntityUtils.toList(userService.list(), User::getUserId);
+        RedisBitMapUtils.init(USER_BITMAP_KEY, userIds);
+        return AjaxResult.success();
+    }
+
+    /**
+     * 删除BitMap 主键ID
+     */
+    @GetMapping("/list2")
+    public AjaxResult list2() {
+        RedisBitMapUtils.removeBit(USER_BITMAP_KEY, 5);
+        return AjaxResult.success();
+    }
+
+    /**
+     * 增加BitMap 主键ID
+     */
+    @GetMapping("/list3")
+    public AjaxResult list3() {
+        RedisBitMapUtils.setBit(USER_BITMAP_KEY, 5);
+        return AjaxResult.success();
+    }
+
+    /**
+     * 使用方式一：编程式开发
+     */
+    @GetMapping("/list4/{id}")
+    public AjaxResult list4(@PathVariable Long id) {
+        if (RedisBitMapUtils.getBit(USER_BITMAP_KEY,id)) {
+            return AjaxResult.success(userService.getById(id));
+        }
+        return AjaxResult.success();
+    }
+
+    /**
+     * 使用方式二：注解式开发
+     */
+    @GetMapping("/list5/{id}")
+    @BitMap(key = USER_BITMAP_KEY, id = "#id")
+    public AjaxResult list5(@PathVariable Long id) {
+        return AjaxResult.success(userService.getById(id));
+    }
+
+    /**
+     * 清空key
+     */
+    @GetMapping("/list6")
+    public AjaxResult list6() {
+        RedisBitMapUtils.remove(USER_BITMAP_KEY);
         return AjaxResult.success();
     }
 }
